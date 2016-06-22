@@ -43,7 +43,13 @@ class GildedRose {
 				}
 			}
 
-			if (!items[i].name.equals("Sulfuras, Hand of Ragnaros")) {
+			if(items[i].sellIn > 0 && items[i].name.equals("Sulfuras New"))
+			{
+				items[i].sellIn = items[i].sellIn - 1;
+			}
+			
+			if (!items[i].name.equals("Sulfuras, Hand of Ragnaros") && !items[i].name.equals("Sulfuras New")) {
+										
 				items[i].sellIn = items[i].sellIn - 1;
 			}
 
